@@ -56,7 +56,7 @@ function jacobi_gauss_lobatto(α, β, N)
     x = zeros(N+1)
     x[1], x[N+1] = -1, 1
 
-    x_GQ, w = jacobi_gauss_quadrature(α+1, β+1, N-2)
+    x_GQ, _ = jacobi_gauss_quadrature(α+1, β+1, N-2)
     x[2:N] .= x_GQ
     
     return x
