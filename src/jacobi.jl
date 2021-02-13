@@ -52,13 +52,12 @@ end
 function jacobi_gauss_lobatto(α, β, N)
     N == 0 && error("What are you doing? Gauss-Lobatto points only make sense if N >= 1.")
     N == 1 && return [-1, 1]
-    
+
     x = zeros(N+1)
     x[1], x[N+1] = -1, 1
 
     x_GQ, _ = jacobi_gauss_quadrature(α+1, β+1, N-2)
     x[2:N] .= x_GQ
-    
+
     return x
 end
-
