@@ -1,0 +1,7 @@
+name = "DiscontinuousGherkins"
+uuid = "045df00d-45f8-45a7-ae4b-f424bb4a0af0"
+authors = ["ali.hh.ramadhan@gmail.com <ali.hh.ramadhan@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+FastGaussQuadrature = "442a2c76-b920-505d-bb47-c5924d526838"
