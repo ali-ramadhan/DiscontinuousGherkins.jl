@@ -20,7 +20,7 @@ function jacobi(x, α, β, n::Int)
 end
 
 " Evaluates the derivative of the Jacobi polynomial Pₙᵅᵝ(x). "
-∂jacobi(x, α, β, n::Int) = √(n * (n+α+β+1)) * jacobi(x, α+1, β+1, n-1)
+∂jacobi(x, α, β, n::Int) = n == 0 ? 0 : √(n * (n+α+β+1)) * jacobi(x, α+1, β+1, n-1)
 
 " Guassian quadrature points and weights for the Jacobi polynomial Pₙᵅᵝ. "
 function jacobi_gauss_quadrature(α, β, N)
